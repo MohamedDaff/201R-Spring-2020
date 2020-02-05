@@ -1,0 +1,159 @@
+// Program1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+
+
+int player_pot =0;
+int ran_num;
+int a = 1;
+int AI_pot = 0;
+int player_pot_cup = 0;
+char user_choice;
+char decision;
+int main()
+{
+    
+    while (true)
+    {
+        while (a < 1000000000)
+        {
+            if ((player_pot < 50) && (AI_pot < 50))
+            {
+                cout << "\n";
+                cout << "Score   " << "You: " << player_pot << "   AI: " << AI_pot << "\n" << endl;
+                a = a + 1;
+                if (a % 2 == 0)
+                {
+                    cout << "Player turn\n" << endl;
+                    player_pot_cup = 0;
+                    while (true)
+                    {
+                        
+                        cout << " (R)oll again or (H)old? >>> ";
+                        cin >> user_choice;
+                        
+                    if ((user_choice == 'R') || (user_choice == 'r'))
+                    {
+
+                            ran_num = rand() % 6 + 1;
+
+                            if (ran_num == 1)
+                            {
+                                cout << "Dice Roll 1: BUST" << endl;
+                                player_pot_cup = 0;
+                                break;
+                            }
+                            else
+                            {
+                                if (player_pot >= 50)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    
+                                    player_pot_cup += ran_num;
+                                    cout << "Dice Roll: " << ran_num << "  Pot:  " << player_pot_cup;
+
+                                    continue;
+                                }
+                            }
+
+
+                    }
+                        else if ((user_choice == 'H') || (user_choice == 'h'))
+                        {
+                            player_pot += player_pot_cup;
+                            break;
+                        }
+                        else
+                        {
+                            cout << "You must enter R or H" << endl;
+
+                            continue;
+                        }
+                    }
+                }
+                else if (a % 2 == 1)
+                {
+                    cout << "AI turn \n" << endl;
+                    while (true)
+                    {
+                     ran_num = rand() % 6 + 1;
+
+                    if (ran_num == 1)
+                    {
+                            cout << "Dice Roll 1: BUST" << endl;
+                            AI_pot = 0;
+                            break;
+                    }
+                    else
+                    {
+                            if (AI_pot >= 50)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                AI_pot += ran_num;
+                                cout << "Dice Roll: " << ran_num << "  Pot: " << AI_pot << endl;
+                                cout;
+                                continue;
+                            }
+                    }
+
+
+                    }
+                }
+            }
+            else if (player_pot >= 50)
+            {
+                cout << "\n" << endl;
+                cout << "Player wins!";
+                break;
+            }
+            else if (AI_pot >= 50)
+            {
+                cout << "\n" << endl;
+                cout << "AI wins!";
+                break;
+            }
+
+
+
+
+
+        }
+        cout << "Do you want to play again? >>> ";
+        cin >> decision;
+        if ((decision == 'y') || (decision == 'Y'))
+        {
+            
+            if (AI_pot >= 50)
+            {
+                a = 1;
+            }
+            else
+            {
+                a = 0;
+            }
+
+            
+            player_pot = 0;
+            AI_pot = 0;
+
+            continue;
+        }
+        else if ((decision == 'n') || (decision == 'N'))
+        {
+            cout << "Thank you for playing my game";
+            break;
+        }
+    }
+    return 0;
+    
+}
