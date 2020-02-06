@@ -67,7 +67,7 @@ void outputScore(int aiScore, int playerScore) {
 int rollDice() {
 	int dieValue;
 	do {
-		dieValue = rand() % 10;
+		dieValue = rand() % 6;
 	} while (dieValue == 0);
 	return dieValue;
 }
