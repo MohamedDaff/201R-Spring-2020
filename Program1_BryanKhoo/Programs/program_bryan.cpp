@@ -16,7 +16,7 @@ char userChoice(int final_playerScore, string username, int final_aiScore);
 
 int main() {
 	//declare needed variables
-	int aiScore, playerScore, tempScore, aiChoice, ans; 
+	int aiScore, playerScore, tempScore, aiChoice, ans, winner; 
 	string player = "Player";
 	string ai = "AI";
 	//have a counter for ai and player turns 
@@ -41,11 +41,17 @@ int main() {
 			counter++;
 
 		} while (aiScore < 50 && playerScore < 50);
-		//compare which score is highest
-		if (playerScore > aiScore)
+		//compare which score is highest, if player wins, set the winner to 1; if ai wins, set winner to 2
+		if (playerScore > aiScore) {
 			ans = userChoice(playerScore, player, aiScore);
-		else
+			winner = 1;
+		}
+		else {
 			ans = userChoice(playerScore, ai, aiScore);
+			winner = 2;
+		}
+		//if winner is 1, ai starts; if winner is 2, player starts
+		counter = winner;
 	} while (ans == 'y' || ans == 'Y');
 	
 	return 0;
@@ -117,31 +123,27 @@ int aiPlays(string player, int score) {
 	cout << player << " Turn" << endl;
 	choice = 1;
 	// if choice = 1, roll dice, else quit loop
-	while (choice == 1) {
-		if (choice == 1) {
-			dieValue = rollDice();
-			if (dieValue == 1) {
-				if (firstRound == 0)
-					continue;
-				bust();
-				aiPotValue = 0;
-				choice = 0;
-			}
-			else {
-				aiPotValue += dieValue;
-				cout << "Die Roll: " << dieValue << "		Pot: " << aiPotValue << endl;
-				firstRound += 1;
-				//randomize the ai choice
-				choice = (rand() % 10) % 2;
-			}
+	while (choice == 1 && aiPotValue < 20) {
+		dieValue = rollDice();
+		if (dieValue == 1) {
+			if (firstRound == 0)
+				continue;
+			bust();
+			aiPotValue = 0;
+			choice = 0;
 		}
-		else
-			break;
+		else {
+			aiPotValue += dieValue;
+			cout << "Die Roll: " << dieValue << "		Pot: " << aiPotValue << endl;
+			firstRound += 1;
+			//randomize the ai choice
+		}
 	}
 	// add score with pot value and return total value
 	score += aiPotValue;
 	return score;
 }
+	
 
 char userChoice(int final_playerScore, string username, int final_aiScore) {
 	char ansUser;
