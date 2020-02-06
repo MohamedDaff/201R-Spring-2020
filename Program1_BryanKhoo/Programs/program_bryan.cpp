@@ -66,9 +66,7 @@ void outputScore(int aiScore, int playerScore) {
 // function for rolling a dice
 int rollDice() {
 	int dieValue;
-	do {
-		dieValue = rand() % 6;
-	} while (dieValue == 0);
+	dieValue = (rand() % 6) + 1;
 	return dieValue;
 }
 //function for displaying bust message
