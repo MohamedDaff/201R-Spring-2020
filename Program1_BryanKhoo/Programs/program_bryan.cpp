@@ -15,6 +15,8 @@ char userChoice(int final_playerScore, string username, int final_aiScore);
 
 
 int main() {
+	//have random numbers using srand and time
+	srand(time(0));
 	//declare needed variables
 	int aiScore, playerScore, tempScore, aiChoice, ans, winner; 
 	string player = "Player";
@@ -120,7 +122,6 @@ int aiPlays(string player, int score) {
 	int dieValue, aiPotValue, choice, firstRound;
 	aiPotValue = 0;
 	firstRound = 0;
-	srand(time(0));
 	choice = 1;
 	cout << player << " Turn" << endl;
 	// if choice = 1, roll dice, else quit loop
