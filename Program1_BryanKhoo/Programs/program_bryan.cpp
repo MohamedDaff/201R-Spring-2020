@@ -21,6 +21,7 @@ int main() {
 	string ai = "AI";
 	//have a counter for ai and player turns 
 	int counter = 2;
+	//do while loop to keep playing the game until user enter N or n
 	do {
 		aiScore = 0;
 		playerScore = 0;
@@ -66,6 +67,7 @@ void outputScore(int aiScore, int playerScore) {
 // function for rolling a dice
 int rollDice() {
 	int dieValue;
+	// remainder to 0 and 5, add 1 to have range 1 - 6
 	dieValue = (rand() % 6) + 1;
 	return dieValue;
 }
@@ -73,13 +75,14 @@ int rollDice() {
 void bust() {
 	cout << "Die Roll: BUST" << endl;
 }
-
+//function for player turn 
 int playerTurn(string username, int score) {
 	int dieValue, potValue, firstRound;
 	potValue = 0;
 	firstRound = 0;
 	string userChoice = "r";
 	cout << username << " Turn" << endl;
+	//a do while loop that ask whether the user wants to roll or hold 
 	do {
 		// if user enters 'r', continue playing
 		if (userChoice == "r" || userChoice == "R") {
@@ -118,8 +121,8 @@ int aiPlays(string player, int score) {
 	aiPotValue = 0;
 	firstRound = 0;
 	srand(time(0));
-	cout << player << " Turn" << endl;
 	choice = 1;
+	cout << player << " Turn" << endl;
 	// if choice = 1, roll dice, else quit loop
 	while (choice == 1 && aiPotValue < 20) {
 		dieValue = rollDice();
@@ -134,7 +137,6 @@ int aiPlays(string player, int score) {
 			aiPotValue += dieValue;
 			cout << "Die Roll: " << dieValue << "		Pot: " << aiPotValue << endl;
 			firstRound += 1;
-			//randomize the ai choice
 		}
 	}
 	// add score with pot value and return total value
@@ -142,7 +144,7 @@ int aiPlays(string player, int score) {
 	return score;
 }
 	
-
+//function to declare winner and ask user whether they want to play again 
 char userChoice(int final_playerScore, string username, int final_aiScore) {
 	char ansUser;
 	cout << "Congratulations " << username << "! You won!!" << endl;
