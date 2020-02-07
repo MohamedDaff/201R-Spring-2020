@@ -94,7 +94,7 @@ int playerTurn(string username, int score) {
 				firstRound++;
 			}
 			else {
-				//if dice value is 1 and it is the first round, roll dice again 
+				//if dice value is 1 and it is the first round, roll dice again. This is to prevent player from busting in the first round
 				if (firstRound == 0)
 					continue;
 				bust();
@@ -127,6 +127,7 @@ int aiPlays(string player, int score) {
 	while (choice == 1 && aiPotValue < 20) {
 		dieValue = rollDice();
 		if (dieValue == 1) {
+			//if it is the first round and the die is 1, keep rolling. This is to prevent player from busting in the first round
 			if (firstRound == 0)
 				continue;
 			bust();
