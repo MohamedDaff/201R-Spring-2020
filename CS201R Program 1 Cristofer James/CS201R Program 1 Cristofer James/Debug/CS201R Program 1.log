@@ -1,4 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CS201R Program 1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Program 1.cpp
-C:\Users\crisr\Documents\School Work\201R-Spring-2020\James-Cristofer\CS201R Program 1\CS201R Program 1\Program 1.cpp(17,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  CS201R Program 1.vcxproj -> C:\Users\crisr\Documents\School Work\201R-Spring-2020\James-Cristofer\CS201R Program 1\Debug\CS201R Program 1 Cristofer James.exe
