@@ -1,0 +1,6 @@
+﻿  Program2_main.cpp
+C:\Users\degag\Desktop\Programming\Program 2 - Bryan Khoo\Program 2 - Bryan Khoo\Program2_main.cpp(78,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\degag\Desktop\Programming\Program 2 - Bryan Khoo\Program 2 - Bryan Khoo\Program2_main.cpp(105,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\degag\Desktop\Programming\Program 2 - Bryan Khoo\Program 2 - Bryan Khoo\Program2_main.cpp(117,41): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\degag\Desktop\Programming\Program 2 - Bryan Khoo\Program 2 - Bryan Khoo\Program2_main.cpp(90,6): warning C4101: 'totalArea': unreferenced local variable
+  Program 2 - Bryan Khoo.vcxproj -> C:\Users\degag\Desktop\Programming\Program 2 - Bryan Khoo\Debug\Program 2 - Bryan Khoo.exe
