@@ -1,0 +1,3 @@
+﻿  Program 1 Cristofer James.cpp
+C:\Users\crisr\source\repos\Program 1 Cristofer James\Program 1 Cristofer James\Program 1 Cristofer James.cpp(23,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Program 1 Cristofer James.vcxproj -> C:\Users\crisr\source\repos\Program 1 Cristofer James\Debug\Program 1 Cristofer James.exe

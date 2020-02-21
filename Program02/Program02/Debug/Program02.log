@@ -1,0 +1,9 @@
+﻿  Program02_Ben.cpp
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(14,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(42,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(43,9): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(78,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(87,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(98,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\Benjamin_Program02\Program02\Program02\Program02_Ben.cpp(103,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Program02.vcxproj -> C:\Users\Admin\Benjamin_Program02\Program02\Debug\Program02.exe
